@@ -2,8 +2,15 @@ package popcount
 
 var pc [256]byte
 
+// var pc [256]byte = func() (pc [256]byte) {
+// 	for i := range pc {
+// 		pc[i] = pc[i/2] + byte(i&1)
+// 	}
+// 	return
+// }()
+
 func init() {
-	for i, _ := range pc {
+	for i := range pc {
 		pc[i] = pc[i/2] + byte(i&1)
 	}
 }
