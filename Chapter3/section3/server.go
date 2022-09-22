@@ -17,7 +17,7 @@ func main() {
 func handleMandelbrot(writer http.ResponseWriter, r *http.Request) {
 	const (
 		xmin, ymin, xmax, ymax = -2, -2, +2, +2
-		width, height          = 8192, 8192
+		width, height          = 1024, 1024
 	)
 
 	img := image.NewRGBA(image.Rect(0, 0, width, height))
